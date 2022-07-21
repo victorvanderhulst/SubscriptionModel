@@ -1,0 +1,39 @@
+<html>
+  <title>DAI Subscription</title>
+    <script
+  src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"
+  integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk="
+  crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+  <body>
+    <h1>DAI Subscription</h1>
+    <div>
+      <b>Your current account: </b><span id="currentAccount"></span><br>
+      <b>Your current DAI balance: </b><span id="currentDAIBalance"></span> DAI<br>
+      <b>Your current allowance: </b><span id="currentAllowance"></span> DAI<br><br>
+      <b>Subscription SC: </b><span id="scAddress"></span><br>
+      <b>DAI SC: </b><span id="daiAddress"></span><br>
+      <b>Collected DAI: </b><span id="collectedDAI"></span> DAI<br>
+
+    </div>
+
+
+<br><br>
+
+    <div>
+      Set approval for: <input id="setApproval" type="text" placeholder="DAI amount"> DAI
+      <button onclick="App.setApproval()" name="submit">Approve</button>
+    </div>
+
+<br><br>
+
+    <div>
+      <button onclick="App.collectMonthlyFee()" name="submit">Pay monthly fee [10 DAI]</button>
+    </div>
+
+  </body>
+</html>
